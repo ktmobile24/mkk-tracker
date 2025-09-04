@@ -1,0 +1,11 @@
+{
+  "holdings": {},
+  "cash_uninvested": 0.0,
+  "settings": {
+    "currency": "USD",
+    "auto_price": true
+  },
+  "last_prices": {},
+  "last_updated": null,
+  "version": "1.8.8"
+}
