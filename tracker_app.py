@@ -31,9 +31,8 @@ from firebase_admin import credentials, db
 # Firebase Initialization - Runs once
 if not firebase_admin._apps:
     try:
-        # Load your secret key
-        with open('firebase_key.json', 'r') as f:
-            cred = credentials.Certificate(json.load(f))
+        # Load Firebase key from Streamlit secrets
+        cred = credentials.Certificate(st.secrets["gcp_service_account"])
         # Initialize with your Database URL
         firebase_admin.initialize_app(cred, {
             'databaseURL': 'https://mkk-investment-tracker-default-rtdb.firebaseio.com/'
